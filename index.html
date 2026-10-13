@@ -676,9 +676,9 @@
       <div class="container">
         <div class="section-header text-center">
           <span class="section-tag">Caso Insignia de Ingeniería</span>
-          <h2 class="section-title">Innovación y Sostenibilidad en la Industria Láctea</h2>
+          <h2 class="section-title">Automatización y Supervisión SCADA en Línea de Derivados Lácteos</h2>
           <p class="section-subtitle">
-            Conoce nuestro proyecto insignia de transformación integral de procesos: una planta inteligente de alta capacidad que combina automatización continua, optimización energética y control avanzado de procesos.
+            A partir del diagnóstico operacional y el análisis de flujo en la línea de quesos de pasta hilada, se identificaron oportunidades de mejora en el control de variables críticas y la trazabilidad de los lotes.
           </p>
         </div>
 
@@ -686,50 +686,94 @@
         <article class="featured-project-card">
           <div class="featured-project-grid">
             
-            <!-- Elemento Visual Representativo [MEDIA_PROYECTO_PLACEHOLDER] -->
-            <div class="featured-media-col" aria-label="[MEDIA_PROYECTO_PLACEHOLDER]">
+            <!-- Elemento Visual Representativo: Esquema de Línea de Pasta Hilada & SCADA -->
+            <div class="featured-media-col" aria-label="Esquema de Automatización y Supervisión SCADA en Línea de Pasta Hilada">
               <div class="featured-media-box">
                 <svg viewBox="0 0 560 360" class="featured-illustration-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Fondo Técnico Industrial -->
                   <rect width="560" height="360" rx="12" fill="#0F172A"/>
                   
-                  <!-- Silos de Almacenamiento Sanitario -->
-                  <rect x="50" y="80" width="70" height="180" rx="10" fill="#1E293B" stroke="#38BDF8" stroke-width="2.5"/>
-                  <rect x="135" y="80" width="70" height="180" rx="10" fill="#1E293B" stroke="#38BDF8" stroke-width="2.5"/>
-                  <path d="M50 100 Q85 70 120 100" stroke="#38BDF8" stroke-width="2" fill="none"/>
-                  <path d="M135 100 Q170 70 205 100" stroke="#38BDF8" stroke-width="2" fill="none"/>
-                  <line x1="85" y1="210" x2="85" y2="250" stroke="#0284C7" stroke-width="4"/>
-                  <line x1="170" y1="210" x2="170" y2="250" stroke="#0284C7" stroke-width="4"/>
+                  <!-- Cabecera de Red y Estación Central SCADA -->
+                  <path d="M40 50 H520" stroke="#0284C7" stroke-width="2" stroke-dasharray="4 3"/>
+                  <rect x="180" y="16" width="200" height="42" rx="6" fill="#0B1F33" stroke="#38BDF8" stroke-width="1.8"/>
+                  <circle cx="198" cy="37" r="4.5" fill="#10B981"/>
+                  <text x="212" y="32" fill="#FFFFFF" font-size="11" font-weight="bold" font-family="sans-serif">SISTEMA SCADA · PLC</text>
+                  <text x="212" y="47" fill="#38BDF8" font-size="9" font-family="sans-serif">Supervisión & Datos en Tiempo Real</text>
                   
-                  <!-- Línea de Cañerías Higiénicas y Matriz de Válvulas Mixproof -->
-                  <path d="M120 230 H240 V150 H320" stroke="#38BDF8" stroke-width="3.5" fill="none"/>
-                  <circle cx="240" cy="190" r="10" fill="#0284C7" stroke="#38BDF8" stroke-width="2"/>
-                  <circle cx="280" cy="150" r="8" fill="#10B981" stroke="#E2E8F0" stroke-width="2"/>
+                  <!-- Enlaces de Bus de Campo (Sensores -> SCADA) -->
+                  <path d="M95 130 V50" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="3 3"/>
+                  <path d="M270 135 V50" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="3 3"/>
+                  <path d="M455 145 V50" stroke="#10B981" stroke-width="1.5" stroke-dasharray="3 3"/>
+
+                  <!-- ==============================================
+                       ETAPA 1: TINA QUESERA (Coagulación / Corte)
+                       ============================================== -->
+                  <rect x="40" y="130" width="115" height="135" rx="10" fill="#1E293B" stroke="#38BDF8" stroke-width="2.2"/>
+                  <!-- Doble Camisa Térmica -->
+                  <path d="M48 150 H147 M48 245 H147" stroke="#0284C7" stroke-width="1.5" stroke-dasharray="2 2"/>
+                  <!-- Agitador / Lira de Corte -->
+                  <rect x="85" y="105" width="25" height="25" rx="3" fill="#0EA5E9"/>
+                  <line x1="97" y1="130" x2="97" y2="225" stroke="#E2E8F0" stroke-width="3"/>
+                  <path d="M70 215 H125 M70 230 H125" stroke="#38BDF8" stroke-width="2"/>
+                  <!-- Sensores de Campo: Temp y pH -->
+                  <circle cx="60" cy="180" r="13" fill="#0B1F33" stroke="#38BDF8" stroke-width="1.8"/>
+                  <text x="60" y="184" fill="#38BDF8" font-size="8.5" font-weight="bold" text-anchor="middle" font-family="sans-serif">TT-01</text>
                   
-                  <!-- Unidad Pasteurizadora y Regeneración Térmica -->
-                  <rect x="320" y="110" width="100" height="150" rx="8" fill="#1E293B" stroke="#0EA5E9" stroke-width="2.5"/>
-                  <path d="M335 140 H405 M335 165 H405 M335 190 H405 M335 215 H405" stroke="#38BDF8" stroke-width="2" stroke-dasharray="4 3"/>
-                  <text x="370" y="132" fill="#38BDF8" font-size="11" font-weight="bold" text-anchor="middle" font-family="sans-serif">HTST / UHT</text>
+                  <circle cx="135" cy="180" r="13" fill="#0B1F33" stroke="#38BDF8" stroke-width="1.8"/>
+                  <text x="135" y="184" fill="#38BDF8" font-size="8" font-weight="bold" text-anchor="middle" font-family="sans-serif">pHT-01</text>
+                  <text x="97" y="255" fill="#94A3B8" font-size="9.5" font-weight="bold" text-anchor="middle" font-family="sans-serif">TINA QUESERA</text>
+
+                  <!-- Tubería de Transferencia con Válvula Sanitaria -->
+                  <path d="M155 210 H205" stroke="#38BDF8" stroke-width="3.5"/>
+                  <circle cx="180" cy="210" r="6" fill="#10B981" stroke="#E2E8F0" stroke-width="1.5"/>
+
+                  <!-- ==============================================
+                       ETAPA 2: HILADORA / AMASADORA (Pasta Hilada)
+                       ============================================== -->
+                  <rect x="205" y="145" width="135" height="120" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="2.2"/>
+                  <!-- Tornillos Sinfines de Hilado -->
+                  <path d="M220 180 Q240 170 260 180 T300 180 T325 180" stroke="#F59E0B" stroke-width="3" fill="none"/>
+                  <path d="M220 205 Q240 195 260 205 T300 205 T325 205" stroke="#F59E0B" stroke-width="3" fill="none"/>
+                  <!-- Sensores de Campo: Temp Agua Hilado y Presión Vapor -->
+                  <circle cx="235" cy="145" r="13" fill="#0B1F33" stroke="#F59E0B" stroke-width="1.8"/>
+                  <text x="235" y="149" fill="#F59E0B" font-size="8.5" font-weight="bold" text-anchor="middle" font-family="sans-serif">TT-02</text>
                   
-                  <!-- Envasado Aséptico y Cinta Robotizada -->
-                  <rect x="445" y="160" width="80" height="100" rx="6" fill="#1E293B" stroke="#F59E0B" stroke-width="2"/>
-                  <circle cx="485" cy="185" r="12" stroke="#F59E0B" stroke-width="2"/>
-                  <line x1="420" y1="230" x2="525" y2="230" stroke="#94A3B8" stroke-width="3"/>
+                  <circle cx="305" cy="145" r="13" fill="#0B1F33" stroke="#F59E0B" stroke-width="1.8"/>
+                  <text x="305" y="149" fill="#F59E0B" font-size="8.5" font-weight="bold" text-anchor="middle" font-family="sans-serif">PT-01</text>
+                  <text x="272" y="255" fill="#94A3B8" font-size="9.5" font-weight="bold" text-anchor="middle" font-family="sans-serif">HILADORA / AMASADO</text>
+
+                  <!-- Transferencia a Moldeo -->
+                  <path d="M340 210 H390" stroke="#F59E0B" stroke-width="3.5"/>
+                  <circle cx="365" cy="210" r="6" fill="#10B981" stroke="#E2E8F0" stroke-width="1.5"/>
+
+                  <!-- ==============================================
+                       ETAPA 3: MOLDEADORA & TINA DE SALMUERA
+                       ============================================== -->
+                  <rect x="390" y="150" width="130" height="115" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="2.2"/>
+                  <!-- Cabezal de Formado & Bloques de Queso -->
+                  <rect x="405" y="170" width="30" height="20" rx="3" fill="#F59E0B" opacity="0.9"/>
+                  <rect x="445" y="170" width="30" height="20" rx="3" fill="#F59E0B" opacity="0.9"/>
+                  <!-- Tina de Enfriamiento / Salmuera -->
+                  <path d="M400 205 H510 V235 H400 Z" fill="#0284C7" opacity="0.3" stroke="#10B981" stroke-width="1.5"/>
+                  <!-- Sensores de Nivel y Temp Salmuera -->
+                  <circle cx="425" cy="145" r="13" fill="#0B1F33" stroke="#10B981" stroke-width="1.8"/>
+                  <text x="425" y="149" fill="#10B981" font-size="8.5" font-weight="bold" text-anchor="middle" font-family="sans-serif">LT-01</text>
                   
-                  <!-- Telemetría Digital y Señales de Red OT -->
-                  <path d="M85 80 V50 H370 V110" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="3 3"/>
-                  <rect x="250" y="35" width="120" height="30" rx="4" fill="#0284C7" opacity="0.9"/>
-                  <text x="310" y="54" fill="#FFFFFF" font-size="10" font-weight="bold" text-anchor="middle" font-family="sans-serif">SCADA · OPC UA</text>
+                  <circle cx="495" cy="145" r="13" fill="#0B1F33" stroke="#10B981" stroke-width="1.8"/>
+                  <text x="495" y="149" fill="#10B981" font-size="8.5" font-weight="bold" text-anchor="middle" font-family="sans-serif">TT-03</text>
+                  <text x="455" y="255" fill="#94A3B8" font-size="9.5" font-weight="bold" text-anchor="middle" font-family="sans-serif">MOLDEO & SALMUERA</text>
+
+                  <!-- Línea de Piso y Estado Operativo -->
+                  <line x1="20" y1="285" x2="540" y2="285" stroke="#334155" stroke-width="2"/>
+                  <rect x="35" y="300" width="14" height="14" rx="3" fill="#10B981"/>
+                  <text x="57" y="312" fill="#CBD5E1" font-size="10.5" font-family="sans-serif">Instrumentación de Campo Activa</text>
                   
-                  <!-- Piso de Planta y Zonas Limpias -->
-                  <line x1="20" y1="280" x2="540" y2="280" stroke="#334155" stroke-width="2"/>
-                  <rect x="40" y="300" width="16" height="16" rx="3" fill="#10B981"/>
-                  <text x="65" y="313" fill="#94A3B8" font-size="11" font-family="sans-serif">Monitoreo CIP Activo</text>
-                  <rect x="220" y="300" width="16" height="16" rx="3" fill="#0284C7"/>
-                  <text x="245" y="313" fill="#94A3B8" font-size="11" font-family="sans-serif">Regeneración Térmica: 92%</text>
+                  <rect x="275" y="300" width="14" height="14" rx="3" fill="#38BDF8"/>
+                  <text x="297" y="312" fill="#CBD5E1" font-size="10.5" font-family="sans-serif">Control SCADA en Tiempo Real</text>
                 </svg>
                 <div class="featured-media-badge">
-                  <i class="fa-solid fa-industry"></i>
-                  <span>Planta Inteligente 4.0</span>
+                  <i class="fa-solid fa-network-wired"></i>
+                  <span>Línea Pasta Hilada · SCADA</span>
                 </div>
               </div>
             </div>
@@ -737,35 +781,35 @@
             <!-- Contenido Informativo y Resumen General -->
             <div class="featured-info-col">
               <div class="featured-meta-header">
-                <span class="featured-tag"><i class="fa-solid fa-seedling"></i> Agroindustria Sostenible</span>
+                <span class="featured-tag"><i class="fa-solid fa-cheese"></i> Quesos de Pasta Hilada</span>
                 <span class="featured-status"><i class="fa-solid fa-circle-check"></i> Proyecto Insignia</span>
               </div>
 
               <h3 class="featured-title">
-                Proyecto Láctea 4.0: Planta de Procesamiento Inteligente
+                Automatización y Supervisión SCADA en Línea de Derivados Lácteos
               </h3>
 
               <p class="featured-lead">
-                Transformación tecnológica integral de una moderna planta de derivados lácteos de alta capacidad, integrando automatización de procesos batch (ISA-88), telemetría SCADA en tiempo real, regeneración térmica avanzada y arquitectura de red de control industrial de alta disponibilidad.
+                A partir del diagnóstico operacional y el análisis de flujo en la línea de quesos de pasta hilada, se identificaron oportunidades de mejora en el control de variables críticas y la trazabilidad de los lotes. Con base en este levantamiento, se diseñó la instrumentación del proceso mediante la integración de sensores de campo, permitiendo la centralización de variables operativas y la implementación de un sistema SCADA para la supervisión, adquisición de datos y control de la línea en tiempo real.
               </p>
 
-              <!-- Métricas Clave de Impacto Directo -->
+              <!-- Métricas Clave de Impacto Directo (Con guión '-' para completar valores) -->
               <div class="featured-metrics-row">
                 <div class="metric-chip">
-                  <span class="chip-val">250,000 L</span>
-                  <span class="chip-lbl">Capacidad Diaria</span>
+                  <span class="chip-val">-</span>
+                  <span class="chip-lbl">Capacidad de Línea</span>
                 </div>
                 <div class="metric-chip">
-                  <span class="chip-val">-34%</span>
-                  <span class="chip-lbl">Consumo Térmico</span>
+                  <span class="chip-val">-</span>
+                  <span class="chip-lbl">Variables Monitoreadas</span>
                 </div>
                 <div class="metric-chip">
-                  <span class="chip-val">99.8%</span>
-                  <span class="chip-lbl">Trazabilidad Batch</span>
+                  <span class="chip-val">-</span>
+                  <span class="chip-lbl">Trazabilidad de Lotes</span>
                 </div>
                 <div class="metric-chip">
-                  <span class="chip-val">2.8 Años</span>
-                  <span class="chip-lbl">Retorno de Inversión</span>
+                  <span class="chip-val">-</span>
+                  <span class="chip-lbl">Control de Proceso</span>
                 </div>
               </div>
 
@@ -773,15 +817,15 @@
               <div class="featured-highlights-list">
                 <div class="highlight-item">
                   <i class="fa-solid fa-check"></i>
-                  <span><strong>Automatización Integral de Procesos:</strong> Pasteurización HTST/UHT, tanques de maduración y limpieza CIP automatizada con recirculación inteligente.</span>
+                  <span><strong>Diagnóstico y Análisis de Flujo:</strong> Levantamiento operacional detallado en la línea de quesos de pasta hilada para la estandarización y control de cada etapa.</span>
                 </div>
                 <div class="highlight-item">
                   <i class="fa-solid fa-check"></i>
-                  <span><strong>Eficiencia y Sostenibilidad:</strong> Reducción drástica de pérdidas de producto, ahorro de agua en un 38% y recuperación de energía calorífica en circuito cerrado.</span>
+                  <span><strong>Instrumentación de Campo:</strong> Integración de sensores industriales de temperatura, pH, nivel y presión para el control riguroso de variables críticas.</span>
                 </div>
                 <div class="highlight-item">
                   <i class="fa-solid fa-check"></i>
-                  <span><strong>Interoperabilidad y Redes de Planta:</strong> Conectividad OPC UA hacia sistemas MES/ERP con arquitectura de red industrial segmentada y redundante.</span>
+                  <span><strong>Supervisión SCADA en Tiempo Real:</strong> Centralización de variables operativas, adquisición continua de datos, gestión de alarmas y trazabilidad de lotes.</span>
                 </div>
               </div>
 
