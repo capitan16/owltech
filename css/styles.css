@@ -1848,7 +1848,7 @@ button, input, textarea, select {
 /* Pilares Diferenciadores (Tab 2) */
 .pillars-grid-extended {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
 
@@ -1910,10 +1910,10 @@ button, input, textarea, select {
   color: #ffffff;
 }
 
-/* Áreas de Servicio (4 Cajas Especializadas) */
+/* Áreas de Servicio (3 Cajas Especializadas) */
 .services-four-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 
