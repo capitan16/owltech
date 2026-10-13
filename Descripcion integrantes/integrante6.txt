@@ -1,0 +1,8 @@
+FORMACION:
+Ingeniero Mecatrónico. Formación avanzada en investigación, desarrollo tecnológico e innovación (I+D+i), arquitectura de control industrial, robótica y digitalización.
+
+CERTIFICACIONES:
+Certificado en Arquitectura de Controladores PLC/PAC de Alta Gama, Integración de Protocolos Industriales (OPC UA / MQTT) y Estandarización de Software de Automatización.
+
+ESPECIALIDAD:
+Dirección y definición del roadmap tecnológico de OwlTech Automation, homologación de estándares de hardware y software, I+D aplicado a la industria y diseño de arquitecturas técnicas complejas.

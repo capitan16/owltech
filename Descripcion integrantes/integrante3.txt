@@ -1,0 +1,8 @@
+FORMACION:
+Ingeniera Mecatrónica. Formación especializada en gobernanza de datos industriales, integración de sistemas de información empresariales (ERP/MES) y arquitecturas informáticas para manufactura.
+
+CERTIFICACIONES:
+Certificada en Integración de Sistemas Industriales ISA-95 (Enterprise-Control System Integration), Modelado de Datos y Gestión de Tecnologías de Información Operativa.
+
+ESPECIALIDAD:
+Arquitectura e integración de tecnologías de la información de planta, orquestación de bases de datos industriales, trazabilidad digital de producción y conectividad entre piso y directiva.

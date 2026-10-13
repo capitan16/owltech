@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initCorporateTabs();
   initTeamCards();
+  initTeamDescriptions();
   initProjectFilters();
   initContactForm();
   initProjectDetailNav();
@@ -164,6 +165,70 @@ function initTeamCards() {
       card.classList.remove('is-flipped');
     });
   });
+}
+
+/* ==========================================================================
+   3.1 Carga Dinámica de Descripciones desde "Descripcion integrantes/*.txt"
+   ========================================================================== */
+function initTeamDescriptions() {
+  const teamCards = document.querySelectorAll('.team-card[data-member]');
+  if (!teamCards.length) return;
+
+  teamCards.forEach(card => {
+    const memberId = card.getAttribute('data-member');
+    if (!memberId) return;
+
+    // Ruta al archivo de texto de cada integrante
+    const txtPath = `Descripcion integrantes/integrante${memberId}.txt`;
+
+    fetch(encodeURI(txtPath))
+      .then(response => {
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        return response.text();
+      })
+      .then(text => {
+        if (!text || !text.trim()) return;
+        parseAndUpdateCard(card, text);
+      })
+      .catch(() => {
+        // En caso de ejecutarse vía file:// o sin servidor,
+        // se mantienen transparentemente los textos predefinidos en el HTML
+      });
+  });
+}
+
+function parseAndUpdateCard(card, text) {
+  // Parser flexible para capturar las 3 secciones oficiales:
+  // FORMACION:
+  // CERTIFICACIONES:
+  // ESPECIALIDAD:
+  const getSectionContent = (label) => {
+    const regex = new RegExp(
+      `${label}:\\s*([\\s\\S]*?)(?=(?:FORMACION|CERTIFICACIONES|ESPECIALIDAD):|$)`,
+      'i'
+    );
+    const match = text.match(regex);
+    return match ? match[1].trim() : null;
+  };
+
+  const formacion = getSectionContent('FORMACION');
+  const certificaciones = getSectionContent('CERTIFICACIONES');
+  const especialidad = getSectionContent('ESPECIALIDAD');
+
+  if (formacion) {
+    const el = card.querySelector('.info-formacion');
+    if (el) el.textContent = formacion;
+  }
+
+  if (certificaciones) {
+    const el = card.querySelector('.info-certificaciones');
+    if (el) el.textContent = certificaciones;
+  }
+
+  if (especialidad) {
+    const el = card.querySelector('.info-especialidad');
+    if (el) el.textContent = especialidad;
+  }
 }
 
 /* ==========================================================================
