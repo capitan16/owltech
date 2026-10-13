@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 350 215"
+     width="350"
+     height="215"
+     role="img"
+     aria-labelledby="title desc">
+
+  <title id="title">OWLTECH Automation — Owl Mark</title>
+  <desc id="desc">Geometric owl symbol with cyan eye rings, amber irises and movable pupils.</desc>
+
+  <!--
+    OWLTECH OWL MARK
+    Transparent background.
+    The two pupil groups are intentionally separated so JavaScript
+    can animate them independently.
+  -->
+
+  <!-- Left cyan outer ring -->
+  <path id="left-cyan-ring"
+        d="M41 66
+           C31 84 29 111 35 135
+           C42 160 63 177 91 183
+           L115 183
+           L115 165
+           C94 164 76 151 68 132
+           C59 111 63 87 79 70
+           L59 53
+           C52 57 46 61 41 66 Z"
+        fill="#00A6C8"/>
+
+  <!-- Right cyan outer ring -->
+  <path id="right-cyan-ring"
+        d="M309 66
+           C319 84 321 111 315 135
+           C308 160 287 177 259 183
+           L235 183
+           L235 165
+           C256 164 274 151 282 132
+           C291 111 287 87 271 70
+           L291 53
+           C298 57 304 61 309 66 Z"
+        fill="#00A6C8"/>
+
+  <!-- Left dark eye cavity -->
+  <circle cx="100" cy="111" r="52" fill="#0B1F33"/>
+
+  <!-- Right dark eye cavity -->
+  <circle cx="250" cy="111" r="52" fill="#0B1F33"/>
+
+  <!-- Left amber iris -->
+  <circle cx="100" cy="111" r="36" fill="#F5B942"/>
+
+  <!-- Right amber iris -->
+  <circle cx="250" cy="111" r="36" fill="#F5B942"/>
+
+  <!-- Left pupil: animate this group -->
+  <g id="left-pupil"
+     transform="translate(0 0)">
+    <circle cx="100" cy="111" r="18" fill="#0B1F33"/>
+    <circle cx="94" cy="104" r="6" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Right pupil: animate this group -->
+  <g id="right-pupil"
+     transform="translate(0 0)">
+    <circle cx="250" cy="111" r="18" fill="#0B1F33"/>
+    <circle cx="244" cy="104" r="6" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Main angular brow / forehead -->
+  <path id="left-brow"
+        d="M42 18
+           L91 34
+           L141 57
+           L175 76
+           L175 104
+           L137 72
+           L91 57
+           L58 40 Z"
+        fill="#FFFFFF"/>
+
+  <path id="right-brow"
+        d="M308 18
+           L259 34
+           L209 57
+           L175 76
+           L175 104
+           L213 72
+           L259 57
+           L292 40 Z"
+        fill="#FFFFFF"/>
+
+  <!-- Central white face / beak connection -->
+  <path id="center-face"
+        d="M175 76
+           L161 101
+           L175 117
+           L189 101 Z"
+        fill="#FFFFFF"/>
+
+  <!-- Central lower beak -->
+  <path id="beak"
+        d="M175 111
+           L148 138
+           L175 170
+           L202 138 Z"
+        fill="#FFFFFF"/>
+
+</svg>

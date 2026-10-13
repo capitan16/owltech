@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto Láctea 4.0: Planta de Procesamiento Inteligente | OWLTECH AUTOMATION</title>
+  <meta name="description" content="Detalle técnico, arquitectura de ingeniería, análisis financiero y KPIs del Proyecto Láctea 4.0: Innovación y Sostenibilidad en la Industria Láctea por OwlTech Automation.">
+  
+  <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Estilos Principales -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="project-detail-body">
+
+  <!-- =========================================================================
+       HEADER / NAVEGACIÓN
+       ========================================================================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <a href="index.html" class="brand-link" aria-label="Ir a Inicio - OWLTECH AUTOMATION">
+        <div class="logo-box" aria-label="Logo OWLTECH AUTOMATION">
+          <svg id="owltech-owl-logo-detail" class="owl-logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 215" width="350" height="215" role="img" aria-labelledby="owl-title-d owl-desc-d">
+            <title id="owl-title-d">OWLTECH Automation — Owl Mark</title>
+            <desc id="owl-desc-d">Geometric owl symbol with cyan eye rings, amber irises and movable pupils.</desc>
+            <!-- Left cyan outer ring -->
+            <path id="left-cyan-ring-d" d="M41 66 C31 84 29 111 35 135 C42 160 63 177 91 183 L115 183 L115 165 C94 164 76 151 68 132 C59 111 63 87 79 70 L59 53 C52 57 46 61 41 66 Z" fill="#00A6C8"/>
+            <!-- Right cyan outer ring -->
+            <path id="right-cyan-ring-d" d="M309 66 C319 84 321 111 315 135 C308 160 287 177 259 183 L235 183 L235 165 C256 164 274 151 282 132 C291 111 287 87 271 70 L291 53 C298 57 304 61 309 66 Z" fill="#00A6C8"/>
+            <!-- Left dark eye cavity -->
+            <circle cx="100" cy="111" r="52" fill="#0B1F33"/>
+            <!-- Right dark eye cavity -->
+            <circle cx="250" cy="111" r="52" fill="#0B1F33"/>
+            <!-- Left amber iris -->
+            <circle cx="100" cy="111" r="36" fill="#F5B942"/>
+            <!-- Right amber iris -->
+            <circle cx="250" cy="111" r="36" fill="#F5B942"/>
+            <!-- Left pupil -->
+            <g id="left-pupil" transform="translate(0 0)">
+              <circle cx="100" cy="111" r="18" fill="#0B1F33"/>
+              <circle cx="94" cy="104" r="6" fill="#FFFFFF"/>
+            </g>
+            <!-- Right pupil -->
+            <g id="right-pupil" transform="translate(0 0)">
+              <circle cx="250" cy="111" r="18" fill="#0B1F33"/>
+              <circle cx="244" cy="104" r="6" fill="#FFFFFF"/>
+            </g>
+            <!-- Main angular brow -->
+            <path id="left-brow-d" d="M42 18 L91 34 L141 57 L175 76 L175 104 L137 72 L91 57 L58 40 Z" fill="#FFFFFF"/>
+            <path id="right-brow-d" d="M308 18 L259 34 L209 57 L175 76 L175 104 L213 72 L259 57 L292 40 Z" fill="#FFFFFF"/>
+            <!-- Central white face -->
+            <path id="center-face-d" d="M175 76 L161 101 L175 117 L189 101 Z" fill="#FFFFFF"/>
+            <!-- Central lower beak -->
+            <path id="beak-d" d="M175 111 L148 138 L175 170 L202 138 Z" fill="#FFFFFF"/>
+          </svg>
+        </div>
+        <div class="brand-info">
+          <span class="brand-name">OWLTECH</span>
+          <span class="brand-tag">AUTOMATION</span>
+        </div>
+      </a>
+
+      <!-- Botón Hamburguesa Móvil -->
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+
+      <!-- Menú de Navegación -->
+      <nav class="main-nav" id="mainNav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html#inicio" class="nav-link">Inicio</a></li>
+          <li class="nav-item"><a href="index.html#empresa" class="nav-link">Empresa</a></li>
+          <li class="nav-item"><a href="index.html#servicios" class="nav-link">Servicios</a></li>
+          <li class="nav-item"><a href="index.html#equipo" class="nav-link">Equipo</a></li>
+          <li class="nav-item"><a href="index.html#proyectos" class="nav-link active">Proyectos</a></li>
+          <li class="nav-item"><a href="#contacto-proyecto" class="nav-link">Contacto</a></li>
+        </ul>
+        <div class="nav-cta-wrapper">
+          <a href="index.html" class="btn btn-secondary nav-cta">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Volver al Portal</span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================================
+         BREADCRUMBS
+         ========================================================================= -->
+    <div class="breadcrumb-bar">
+      <div class="container">
+        <nav class="breadcrumb-nav" aria-label="Ruta de navegación">
+          <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
+          <span class="separator"><i class="fa-solid fa-chevron-right"></i></span>
+          <a href="index.html#proyectos">Proyectos</a>
+          <span class="separator"><i class="fa-solid fa-chevron-right"></i></span>
+          <span class="current">Proyecto Láctea 4.0</span>
+        </nav>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         1. HERO SECTION (TÍTULO, SUBTÍTULO Y MÉTRICAS CLAVE DE IMPACTO)
+         ========================================================================= -->
+    <section class="detail-hero-section">
+      <div class="detail-hero-bg-overlay"></div>
+      <div class="container detail-hero-container">
+        <div class="detail-hero-header">
+          <div class="project-pill-badge">
+            <i class="fa-solid fa-seedling"></i>
+            <span>Caso Insignia · Innovación y Sostenibilidad Agroindustrial</span>
+          </div>
+          <h1 class="detail-hero-title">
+            Proyecto Láctea 4.0: <span class="text-gradient">Planta de Procesamiento Inteligente</span>
+          </h1>
+          <p class="detail-hero-subtitle">
+            Ingeniería de automatización integral, gemelo digital, recuperación térmica avanzada y ciberseguridad industrial OT para operaciones lácteas sostenibles de alta productividad.
+          </p>
+        </div>
+
+        <!-- 4 Métricas Clave de Impacto del Proyecto -->
+        <div class="detail-impact-metrics-grid">
+          <div class="impact-metric-card">
+            <div class="metric-icon-wrap"><i class="fa-solid fa-gauge-high"></i></div>
+            <div class="metric-number">250,000 L</div>
+            <div class="metric-title">Capacidad Diaria</div>
+            <p class="metric-desc">Procesamiento continuo y estandarizado con recepción automatizada.</p>
+          </div>
+
+          <div class="impact-metric-card">
+            <div class="metric-icon-wrap"><i class="fa-solid fa-fire-flame-curved"></i></div>
+            <div class="metric-number">-34%</div>
+            <div class="metric-title">Consumo Térmico</div>
+            <p class="metric-desc">Recuperación de calor en intercambiadores de placas regenerativos.</p>
+          </div>
+
+          <div class="impact-metric-card">
+            <div class="metric-icon-wrap"><i class="fa-solid fa-chart-line"></i></div>
+            <div class="metric-number">+22%</div>
+            <div class="metric-title">Incremento de OEE</div>
+            <p class="metric-desc">Disminución de paradas no programadas y microcortes de envasado.</p>
+          </div>
+
+          <div class="impact-metric-card">
+            <div class="metric-icon-wrap"><i class="fa-solid fa-coins"></i></div>
+            <div class="metric-number">2.8 Años</div>
+            <div class="metric-title">Payback de Inversión</div>
+            <p class="metric-desc">Retorno acelerado por reducción de mermas y ahorro de insumos químicos.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Barra Rápida de Navegación Interna por Secciones -->
+    <nav class="project-sections-nav" aria-label="Navegación de secciones del proyecto">
+      <div class="container project-nav-container">
+        <a href="#resumen-ejecutivo" class="sec-nav-link active"><i class="fa-solid fa-file-contract"></i> Resumen Ejecutivo</a>
+        <a href="#perspectiva-ingenieria" class="sec-nav-link"><i class="fa-solid fa-gears"></i> Perspectiva de Ingeniería</a>
+        <a href="#perspectiva-financiera" class="sec-nav-link"><i class="fa-solid fa-chart-pie"></i> Perspectiva Financiera</a>
+        <a href="#cifras-kpis" class="sec-nav-link"><i class="fa-solid fa-chart-simple"></i> Cifras y KPIs Clave</a>
+        <a href="#contacto-proyecto" class="sec-nav-link"><i class="fa-solid fa-handshake"></i> Inversión y Contacto</a>
+      </div>
+    </nav>
+
+    <!-- =========================================================================
+         2. RESUMEN EJECUTIVO (VISIÓN GENERAL DEL PROYECTO)
+         ========================================================================= -->
+    <section class="section detail-section" id="resumen-ejecutivo">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Visión General</span>
+          <h2 class="section-title">Resumen Ejecutivo del Proyecto</h2>
+          <p class="section-subtitle">
+            Un salto cualitativo hacia la digitalización higiénica, trazabilidad microbiológica y neutralidad energética en el sector lácteo.
+          </p>
+        </div>
+
+        <div class="executive-grid">
+          <div class="executive-text-col">
+            <h3 class="exec-heading">Contexto y Oportunidad en la Industria Láctea</h3>
+            <p>
+              La industria de procesamiento lácteo enfrenta un entorno altamente exigente: fluctuaciones en la calidad fisicoquímica de la leche cruda, márgenes operativos ajustados, estrictos requerimientos sanitarios internacionales y un consumo intensivo de vapor y agua de limpieza.
+            </p>
+            <p>
+              El <strong>Proyecto Láctea 4.0</strong> surge como la respuesta técnica y estratégica desarrollada por <strong>OWLTECH AUTOMATION</strong> para transformar una planta tradicional en un ecosistema ciberfísico interconectado, donde cada gota de materia prima es monitorizada, estandarizada y aprovechada al máximo.
+            </p>
+
+            <div class="exec-pillars-box">
+              <h4>Objetivos Estratégicos Logrados:</h4>
+              <ul class="exec-checklist">
+                <li><i class="fa-solid fa-check-double"></i> <strong>Cero Mermas por Mezcla:</strong> Automatización de matrices de válvulas a prueba de mezcla (*mixproof*) para eliminar riesgos de contaminación cruzada.</li>
+                <li><i class="fa-solid fa-check-double"></i> <strong>Trazabilidad Genealógica Lote a Lote:</strong> Registro electrónico inalterable desde la descarga de camiones cisterna hasta la paletización.</li>
+                <li><i class="fa-solid fa-check-double"></i> <strong>Eficiencia de Recursos:</strong> Reducción de la huella hídrica en ciclos de lavado CIP mediante recirculación inteligente y reutilización de condensados.</li>
+                <li><i class="fa-solid fa-check-double"></i> <strong>Cumplimiento Normativo Sanitario:</strong> Validación bajo estándares FDA 21 CFR Part 11, EHEDG y 3-A Sanitary Standards.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="executive-cards-col">
+            <div class="exec-fact-card">
+              <div class="fact-header">
+                <i class="fa-solid fa-building"></i>
+                <span>Sector Objetivo</span>
+              </div>
+              <h4>Agroindustria & Derivados Lácteos</h4>
+              <p>Líneas de leche fluida UHT, quesos madurados, yogurt batido y bebidas lácteas funcionales.</p>
+            </div>
+
+            <div class="exec-fact-card">
+              <div class="fact-header">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Ubicación de Implementación</span>
+              </div>
+              <h4>Zona Agroindustrial · Colombia / LATAM</h4>
+              <p>Diseño escalable y replicable para plantas de mediana y gran envergadura en la región.</p>
+            </div>
+
+            <div class="exec-fact-card">
+              <div class="fact-header">
+                <i class="fa-solid fa-shield-virus"></i>
+                <span>Enfoque de Seguridad</span>
+              </div>
+              <h4>Ciberseguridad OT + Inocuidad</h4>
+              <p>Protección perimetral de red industrial bajo IEC 62443 y control microbiológico automatizado.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         3. PERSPECTIVA DE INGENIERÍA (ARQUITECTURA, PROCESOS, TECNOLOGÍA Y DISEÑO)
+         ========================================================================= -->
+    <section class="section detail-section bg-alt" id="perspectiva-ingenieria">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Rigor Metodológico</span>
+          <h2 class="section-title">Perspectiva de Ingeniería y Arquitectura</h2>
+          <p class="section-subtitle">
+            Ingeniería de control predictivo, automatización batch ISA-88, topología de redes industriales redundantes y diseño higiénico de planta.
+          </p>
+        </div>
+
+        <!-- 1. Flujo de Procesos Automatizados -->
+        <div class="engineering-block">
+          <h3 class="block-title"><i class="fa-solid fa-network-wired"></i> Procesos de Planta Automatizados End-to-End</h3>
+          <div class="process-flow-grid">
+            <div class="process-step-card">
+              <span class="step-badge">Etapa 01</span>
+              <h4>Recepción y Desgasificado</h4>
+              <p>Medición de caudal magnético sanitario, desgasificado al vacío, filtrado microbiológico y enfriamiento instantáneo a 4°C en intercambiadores de placa.</p>
+            </div>
+
+            <div class="process-step-card">
+              <span class="step-badge">Etapa 02</span>
+              <h4>Estandarización en Línea</h4>
+              <p>Ajuste automático de grasa y sólidos no grasos mediante analizador espectral continuo acoplado a lazo PID de bomba dosificadora.</p>
+            </div>
+
+            <div class="process-step-card">
+              <span class="step-badge">Etapa 03</span>
+              <h4>Pasteurización y UHT</h4>
+              <p>Tratamiento térmico con sección de regeneración energética al 92%, desvío automático de flujo de seguridad y homogeneización a 200 bar.</p>
+            </div>
+
+            <div class="process-step-card">
+              <span class="step-badge">Etapa 04</span>
+              <h4>Fermentación y Maduración</h4>
+              <p>Control multizona de temperatura con lazo en cascada para tanques de maduración de yogur, dosificación aséptica de cultivos y agitación suave.</p>
+            </div>
+
+            <div class="process-step-card">
+              <span class="step-badge">Etapa 05</span>
+              <h4>Envasado Aséptico y Robótica</h4>
+              <p>Llenadoras asépticas de alta velocidad con cámara estéril presurizada con aire HEPA, servocontrol multieje y paletizado robotizado final.</p>
+            </div>
+
+            <div class="process-step-card">
+              <span class="step-badge">Etapa 06</span>
+              <h4>Sistema CIP Inteligente</h4>
+              <p>Lavado y sanitización multi-circuito automatizado con recuperación de sosa/ácido mediante sensores de conductividad y turbidez óptica.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Arquitectura de Control y Tecnologías Aplicadas -->
+        <div class="engineering-block" style="margin-top: 3.5rem;">
+          <h3 class="block-title"><i class="fa-solid fa-microchip"></i> Stack Tecnológico y Arquitectura de Control</h3>
+          <div class="tech-stack-details-grid">
+            
+            <div class="tech-spec-box">
+              <div class="spec-header">
+                <i class="fa-solid fa-server"></i>
+                <h4>Nivel de Control & Hardware</h4>
+              </div>
+              <ul class="spec-list">
+                <li><strong>Controladores:</strong> PLCs redundantes de alta velocidad en hot-standby para procesos continuos sin interrupción.</li>
+                <li><strong>Buses de Campo:</strong> Red determinística PROFINET / Ethernet/IP sobre fibra óptica con topología en anillo MRP.</li>
+                <li><strong>Instrumentación:</strong> Sensores IO-Link para medición de temperatura PT100, presión higiénica, turbidez y nivel radar guiado.</li>
+                <li><strong>Valvulería Sanitaria:</strong> Colector de válvulas *mixproof* con actuadores inteligentes de confirmación de asiento por bus ASI.</li>
+              </ul>
+            </div>
+
+            <div class="tech-spec-box">
+              <div class="spec-header">
+                <i class="fa-solid fa-desktop"></i>
+                <h4>Nivel de Supervisión (SCADA / MES)</h4>
+              </div>
+              <ul class="spec-list">
+                <li><strong>SCADA Centralizado:</strong> Pantallas de alto rendimiento visual (High-Performance HMI) con gradientes de grises y alertas ergonómicas.</li>
+                <li><strong>Historian de Procesos:</strong> Almacenamiento redundante de series de tiempo con resolución de 100 ms para auditorías sanitarias.</li>
+                <li><strong>Gestión de Recetas ISA-88:</strong> Gestión de órdenes de fabricación, fases y secuencias con bloqueo de errores humanos.</li>
+                <li><strong>Cálculo OEE en Tiempo Real:</strong> Seguimiento automático de disponibilidad, rendimiento y calidad línea por línea.</li>
+              </ul>
+            </div>
+
+            <div class="tech-spec-box">
+              <div class="spec-header">
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+                <h4>IIoT, Edge & Gemelo Digital</h4>
+              </div>
+              <ul class="spec-list">
+                <li><strong>Protocolos de Interoperabilidad:</strong> Servidores y clientes OPC UA integrados con brokers MQTT Sparkplug B.</li>
+                <li><strong>Pasarelas Edge:</strong> Nodos de procesamiento en borde para analítica de consumo específico (kWh/litro y kg vapor/litro).</li>
+                <li><strong>Gemelo Digital de Fluidos:</strong> Simulación en tiempo real de pérdidas de carga y tiempos de contacto térmico.</li>
+                <li><strong>Conexión con ERP:</strong> Intercambio automático de órdenes de producción y consumo exacto de insumos.</li>
+              </ul>
+            </div>
+
+            <div class="tech-spec-box">
+              <div class="spec-header">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h4>Ciberseguridad Industrial OT (IEC 62443)</h4>
+              </div>
+              <ul class="spec-list">
+                <li><strong>Zonas y Conductos:</strong> Segmentación estricta de red separando nivel de campo, nivel de supervisión y red corporativa IT.</li>
+                <li><strong>IDMZ Industrial:</strong> Zona desmilitarizada con doble firewall para accesos remotos seguros de mantenimiento.</li>
+                <li><strong>Autenticación Multifactor (MFA):</strong> Control de roles y permisos con trazabilidad según FDA 21 CFR Part 11.</li>
+                <li><strong>Bastionado de PLCs:</strong> Cierre de puertos vulnerables, deshabilitación de servicios innecesarios e inspección de tráfico OT.</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 3. Diseño y Layout de Planta Higiénico -->
+        <div class="layout-showcase-box" style="margin-top: 3.5rem;">
+          <div class="layout-text">
+            <h3>Diseño Higiénico y Layout de Planta</h3>
+            <p>
+              El diseño de planta incorpora criterios de zonificación higiénica estricta (Zonas Negra, Gris y Blanca), evitando cruces de flujo de aire y personas. La cañería de acero inoxidable grado 316L con soldadura orbital automática cuenta con pendiente drenable del 1.5% para garantizar que no existan puntos ciegos o zonas de estancamiento microbiológico.
+            </p>
+            <div class="layout-tags">
+              <span class="badge-tag">Acero Inox AISI 316L</span>
+              <span class="badge-tag">Soldadura Orbital Certificada</span>
+              <span class="badge-tag">Zonificación EHEDG</span>
+              <span class="badge-tag">100% CIP Cleanable</span>
+            </div>
+          </div>
+          <div class="layout-stats">
+            <div class="stat-mini">
+              <strong>4,800 m²</strong>
+              <span>Superficie de Planta</span>
+            </div>
+            <div class="stat-mini">
+              <strong>14</strong>
+              <span>Tanques Sanitarios</span>
+            </div>
+            <div class="stat-mini">
+              <strong>320+</strong>
+              <span>Válvulas Automatizadas</span>
+            </div>
+            <div class="stat-mini">
+              <strong>1,850</strong>
+              <span>Puntos de E/S de Control</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. PERSPECTIVA FINANCIERA (INVERSIÓN, COSTOS, ROI Y RENTABILIDAD)
+         ========================================================================= -->
+    <section class="section detail-section" id="perspectiva-financiera">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Viabilidad Económica</span>
+          <h2 class="section-title">Perspectiva Financiera y Análisis de Rentabilidad</h2>
+          <p class="section-subtitle">
+            Estructura detallada de inversión de capital (CAPEX), optimización de gastos operativos (OPEX) y análisis del valor presente neto para tomadores de decisión.
+          </p>
+        </div>
+
+        <!-- Resumen de Indicadores Financieros Clave -->
+        <div class="financial-summary-cards">
+          <div class="fin-card">
+            <span class="fin-label">Inversión Total (CAPEX)</span>
+            <div class="fin-value">$1,850,000 USD</div>
+            <span class="fin-sub">Ingeniería, hardware, automatización y comisionamiento</span>
+          </div>
+
+          <div class="fin-card highlight-fin">
+            <span class="fin-label">Tasa Interna de Retorno (TIR)</span>
+            <div class="fin-value">31.4%</div>
+            <span class="fin-sub">Proyección a 7 años superando ampliamente la tasa de descuento</span>
+          </div>
+
+          <div class="fin-card">
+            <span class="fin-label">Valor Actual Neto (VAN)</span>
+            <div class="fin-value">+$1,420,000 USD</div>
+            <span class="fin-sub">Calculado con tasa WACC de referencia del 10.5% anual</span>
+          </div>
+
+          <div class="fin-card">
+            <span class="fin-label">Período de Retorno (Payback)</span>
+            <div class="fin-value">2.8 Años</div>
+            <span class="fin-sub">Flujo de caja libre positivo a partir del mes 34</span>
+          </div>
+        </div>
+
+        <!-- Comparativa CAPEX vs Ahorros OPEX -->
+        <div class="capex-opex-breakdown-grid" style="margin-top: 3.5rem;">
+          
+          <!-- Desglose CAPEX -->
+          <div class="breakdown-card">
+            <div class="breakdown-header">
+              <i class="fa-solid fa-coins"></i>
+              <div>
+                <h4>Distribución del CAPEX Inicial</h4>
+                <p>Asignación presupuestal del proyecto</p>
+              </div>
+            </div>
+
+            <div class="budget-items-list">
+              <div class="budget-item">
+                <div class="budget-info">
+                  <span>Hardware de Control (PLCs redundantes, E/S, Racks)</span>
+                  <strong>$420,000 USD (23%)</strong>
+                </div>
+                <div class="budget-bar"><div class="budget-fill" style="width: 23%;"></div></div>
+              </div>
+
+              <div class="budget-item">
+                <div class="budget-info">
+                  <span>Instrumentación Sanitaria, Válvulas y Cañería 316L</span>
+                  <strong>$580,000 USD (31%)</strong>
+                </div>
+                <div class="budget-bar"><div class="budget-fill" style="width: 31%;"></div></div>
+              </div>
+
+              <div class="budget-item">
+                <div class="budget-info">
+                  <span>Ingeniería de Software (SCADA, Historian, Batch ISA-88)</span>
+                  <strong>$390,000 USD (21%)</strong>
+                </div>
+                <div class="budget-bar"><div class="budget-fill" style="width: 21%;"></div></div>
+              </div>
+
+              <div class="budget-item">
+                <div class="budget-info">
+                  <span>Redes Industriales y Ciberseguridad OT (IEC 62443)</span>
+                  <strong>$220,000 USD (12%)</strong>
+                </div>
+                <div class="budget-bar"><div class="budget-fill" style="width: 12%;"></div></div>
+              </div>
+
+              <div class="budget-item">
+                <div class="budget-info">
+                  <span>Pruebas FAT/SAT, Validación Sanitaria y Comisionamiento</span>
+                  <strong>$240,000 USD (13%)</strong>
+                </div>
+                <div class="budget-bar"><div class="budget-fill" style="width: 13%;"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ahorros Operativos Anuales (OPEX) -->
+          <div class="breakdown-card">
+            <div class="breakdown-header">
+              <i class="fa-solid fa-arrow-trend-down"></i>
+              <div>
+                <h4>Ahorros Operativos Recurrentes (OPEX)</h4>
+                <p>Beneficio económico anual estimado: <strong>+$685,000 USD/año</strong></p>
+              </div>
+            </div>
+
+            <div class="opex-savings-list">
+              <div class="opex-item">
+                <div class="opex-icon"><i class="fa-solid fa-leaf"></i></div>
+                <div class="opex-text">
+                  <h5>Ahorro de Energía Térmica y Vapor</h5>
+                  <p>La regeneración térmica en intercambiadores reduce el gasto de calderas en <strong>$215,000 USD/año</strong>.</p>
+                </div>
+              </div>
+
+              <div class="opex-item">
+                <div class="opex-icon"><i class="fa-solid fa-droplet"></i></div>
+                <div class="opex-text">
+                  <h5>Optimización de Químicos CIP y Agua</h5>
+                  <p>La recirculación guiada por conductividad ahorra <strong>$160,000 USD/año</strong> en sosa, ácido y tratamiento de efluentes.</p>
+                </div>
+              </div>
+
+              <div class="opex-item">
+                <div class="opex-icon"><i class="fa-solid fa-recycle"></i></div>
+                <div class="opex-text">
+                  <h5>Eliminación de Mermas de Materia Prima</h5>
+                  <p>La estandarización automática y el corte limpio de fases evitan el desperdicio de <strong>$190,000 USD/año</strong> en leche cruda.</p>
+                </div>
+              </div>
+
+              <div class="opex-item">
+                <div class="opex-icon"><i class="fa-solid fa-wrench"></i></div>
+                <div class="opex-text">
+                  <h5>Reducción de Mantenimiento Correctivo</h5>
+                  <p>La telemetría predictiva de bombas y motores disminuye horas de paro y repuestos en <strong>$120,000 USD/año</strong>.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Matriz de Mitigación de Riesgos -->
+        <div class="risk-matrix-wrapper" style="margin-top: 3.5rem;">
+          <h3 class="block-title"><i class="fa-solid fa-shield-check"></i> Matriz de Mitigación de Riesgos del Proyecto</h3>
+          <div class="risk-table-responsive">
+            <table class="corporate-table">
+              <thead>
+                <tr>
+                  <th>Factor de Riesgo</th>
+                  <th>Impacto Potencial</th>
+                  <th>Estrategia de Mitigación OWLTECH</th>
+                  <th>Nivel Residual</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Parada de Planta durante Migración</strong></td>
+                  <td>Pérdida de producción y ventas</td>
+                  <td>Comisionamiento por etapas (*phased deployment*) y pruebas en gemelo digital antes de corte físico.</td>
+                  <td><span class="status-low">Bajo</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Contaminación Cruzada en Tuberías</strong></td>
+                  <td>Lotes no conformes y daño a marca</td>
+                  <td>Matriz automatizada con válvulas de doble asiento y purga atmosférica de cavidad (*mixproof*).</td>
+                  <td><span class="status-low">Mitigado</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Ataques Cibernéticos en Red OT</strong></td>
+                  <td>Interrupción operativa de control</td>
+                  <td>Arquitectura segmentada IEC 62443, IDMZ industrial con firewalls de inspección profunda y accesos MFA.</td>
+                  <td><span class="status-low">Controlado</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Variabilidad de Materia Prima</strong></td>
+                  <td>Incumplimiento de especificación</td>
+                  <td>Estandarización continua con lazo cerrado de alta frecuencia y compensación matemática en línea.</td>
+                  <td><span class="status-low">Bajo</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. CIFRAS Y KPIS CLAVE (INDICADORES DE PRODUCCIÓN, CAPACIDAD Y EFICIENCIA)
+         ========================================================================= -->
+    <section class="section detail-section bg-alt" id="cifras-kpis">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Panel de Telemetría</span>
+          <h2 class="section-title">Cifras y KPIs Clave de Operación</h2>
+          <p class="section-subtitle">
+            Indicadores cuantitativos medidos en régimen continuo que validan el desempeño operativo, sanitario y energético de la planta.
+          </p>
+        </div>
+
+        <!-- Tablero de Métricas de 8 Indicadores -->
+        <div class="kpis-dashboard-grid">
+          
+          <div class="kpi-dash-card">
+            <div class="kpi-top">
+              <span class="kpi-label">OEE Global de Planta</span>
+              <i class="fa-solid fa-chart-pie"></i>
+            </div>
+            <div class="kpi-main-val">88.5%</div>
+            <div class="kpi-progress-bar"><div class="kpi-fill" style="width: 88.5%;"></div></div>
+            <span class="kpi-note">+22.5% vs. línea base manual</span>
+          </div>
+
+          <div class="kpi-dash-card">
+            <div class="kpi-top">
+              <span class="kpi-label">Reducción de Merma</span>
+              <i class="fa-solid fa-arrow-down-short-wide"></i>
+            </div>
+            <div class="kpi-main-val">-65%</div>
+            <div class="kpi-progress-bar"><div class="kpi-fill" style="width: 65%;"></div></div>
+            <span class="kpi-note">Menos de 0.2% de pérdida total de leche</span>
+          </div>
+
+          <div class="kpi-dash-card">
+            <div class="kpi-top">
+              <span class="kpi-label">Ahorro de Agua en Lavados CIP</span>
+              <i class="fa-solid fa-faucet-drip"></i>
+            </div>
+            <div class="kpi-main-val">38.2%</div>
+            <div class="kpi-progress-bar"><div class="kpi-fill" style="width: 76%;"></div></div>
+            <span class="kpi-note">Recirculación por medición de turbidez</span>
+          </div>
+
+          <div class="kpi-dash-card">
+            <div class="kpi-top">
+              <span class="kpi-label">Precisión de Estandarización</span>
+              <i class="fa-solid fa-bullseye"></i>
+            </div>
+            <div class="kpi-main-val">±0.02%</div>
+            <div class="kpi-progress-bar"><div class="kpi-fill" style="width: 98%;"></div></div>
+            <span class="kpi-note">Margen en tenor graso según norma láctea</span>
+          </div>
+
+          <div class="kpi-dash-card">
+            <div class="kpi-top">
+              <span class="kpi-label">Disponibilidad Operativa (Uptime)</span>
+              <i class="fa-solid fa-clock-rotate-left"></i>
+            </div>
+            <div class="kpi-main-val">99.4%</div>
+            <div class="kpi-progress-bar"><div class="kpi-fill" style="width: 99.4%;"></div></div>
+            <span class="kpi-note">Operación 24/7 con redundancia activa</span>
+          </div>
+
+          <div class="kpi-dash-card">
+            <div class="kpi-top">
+              <span class="kpi-label">MTBF (Tiempo Medio Entre Fallas)</span>
+              <i class="fa-solid fa-gears"></i>
+            </div>
+            <div class="kpi-main-val">2,450 h</div>
+            <div class="kpi-progress-bar"><div class="kpi-fill" style="width: 90%;"></div></div>
+            <span class="kpi-note">Mantenimiento predictivo por telemetría</span>
+          </div>
+
+          <div class="kpi-dash-card">
+            <div class="kpi-top">
+              <span class="kpi-label">Consumo Específico Térmico</span>
+              <i class="fa-solid fa-fire"></i>
+            </div>
+            <div class="kpi-main-val">0.08 kWh/L</div>
+            <div class="kpi-progress-bar"><div class="kpi-fill" style="width: 82%;"></div></div>
+            <span class="kpi-note">Regeneración térmica al 92%</span>
+          </div>
+
+          <div class="kpi-dash-card">
+            <div class="kpi-top">
+              <span class="kpi-label">Trazabilidad Electrónica de Lote</span>
+              <i class="fa-solid fa-qrcode"></i>
+            </div>
+            <div class="kpi-main-val">100%</div>
+            <div class="kpi-progress-bar"><div class="kpi-fill" style="width: 100%;"></div></div>
+            <span class="kpi-note">Integración total SCADA / MES / ERP</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         6. LLAMADO A LA ACCIÓN FINAL / CONTACTO PARA INVERSIONISTAS E INTERESADOS
+         ========================================================================= -->
+    <section class="section detail-cta-section" id="contacto-proyecto">
+      <div class="container">
+        <div class="detail-cta-card">
+          <div class="cta-inner-grid">
+            
+            <div class="cta-text-side">
+              <span class="section-tag" style="background: rgba(2,132,199,0.2); color: #38bdf8; border-color: rgba(56,189,248,0.3);">
+                Oportunidad para Inversionistas y Plantas Industriales
+              </span>
+              <h2 class="cta-title">
+                ¿Desea implementar una solución de este calibre en su planta?
+              </h2>
+              <p class="cta-desc">
+                En <strong>OWLTECH AUTOMATION</strong> ponemos a su disposición el equipo multidisciplinario de ingeniería, el modelado financiero preliminar y la hoja de ruta técnica para modernizar su infraestructura productiva con retorno garantizado por contrato.
+              </p>
+
+              <div class="cta-contact-details">
+                <div class="cta-detail-item">
+                  <i class="fa-solid fa-envelope"></i>
+                  <div>
+                    <strong>Canal de Proyectos Estratégicos:</strong>
+                    <a href="mailto:projects@owltechautomation.com">projects@owltechautomation.com</a>
+                  </div>
+                </div>
+                <div class="cta-detail-item">
+                  <i class="fa-solid fa-user-tie"></i>
+                  <div>
+                    <strong>Líder de Proyecto:</strong>
+                    <span>Miguel García · Automation Engineer (`miguel.garcia@owltechautomation.com`)</span>
+                  </div>
+                </div>
+                <div class="cta-detail-item">
+                  <i class="fa-solid fa-phone"></i>
+                  <div>
+                    <strong>Teléfono Directo:</strong>
+                    <span>+57 XXX XXX XXXX (Colombia)</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cta-actions-row">
+                <a href="index.html#contacto" class="btn btn-primary btn-lg">
+                  <span>Solicitar Dossier Técnico & Financiero</span>
+                  <i class="fa-solid fa-file-pdf"></i>
+                </a>
+                <a href="index.html" class="btn btn-secondary btn-lg">
+                  <i class="fa-solid fa-arrow-left"></i>
+                  <span>Volver a la Página Principal</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Caja de Resumen Ejecutivo de Inversión -->
+            <div class="cta-summary-box">
+              <h4>Ficha Resumida de Inversión</h4>
+              <ul class="summary-list">
+                <li><span>Proyecto:</span> <strong>Láctea 4.0 - Planta Inteligente</strong></li>
+                <li><span>Sector:</span> <strong>Agroalimentario / Lácteo B2B</strong></li>
+                <li><span>Alcance:</span> <strong>Ingeniería + Automatización + Ciberseguridad OT</strong></li>
+                <li><span>CAPEX Estimado:</span> <strong>$1,850,000 USD</strong></li>
+                <li><span>TIR Estimada:</span> <strong>31.4%</strong></li>
+                <li><span>Período de Retorno:</span> <strong>2.8 Años</strong></li>
+                <li><span>Normativas:</span> <strong>IEC 62443 · ISA-88 · EHEDG · 21 CFR 11</strong></li>
+                <li><span>Firma de Ingeniería:</span> <strong>OWLTECH AUTOMATION</strong></li>
+              </ul>
+              <div class="summary-quote">
+                <em>“See More. Control Better. Engineering smarter industry.”</em>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       FOOTER CORPORATIVO
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-link footer-brand-link">
+            <div class="logo-box">
+              <svg class="logo-icon" viewBox="0 0 40 40" fill="none">
+                <rect width="40" height="40" rx="10" fill="#0284C7"/>
+                <path d="M12 28L20 12L28 28H23L20 22L17 28H12Z" fill="#FFFFFF"/>
+                <circle cx="20" cy="18" r="2.5" fill="#38BDF8"/>
+              </svg>
+            </div>
+            <div class="brand-info">
+              <span class="brand-name">OWLTECH AUTOMATION</span>
+              <span class="brand-tag">SEE MORE. CONTROL BETTER.</span>
+            </div>
+          </div>
+          <p class="footer-tagline">
+            Firma de ingeniería industrial especializada en integrar automatización, supervisión, conectividad y ciberseguridad para construir operaciones industriales más inteligentes, confiables y seguras.
+          </p>
+          <p style="font-size: 0.8rem; color: #38bdf8; margin-top: 0.75rem; font-weight: 600;">
+            Engineering smarter industry.
+          </p>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Navegación</h4>
+          <ul class="footer-nav">
+            <li><a href="index.html#inicio">Inicio</a></li>
+            <li><a href="index.html#empresa">Empresa & Pilares</a></li>
+            <li><a href="index.html#servicios">Áreas de Servicio</a></li>
+            <li><a href="index.html#equipo">Equipo Técnico</a></li>
+            <li><a href="index.html#proyectos">Proyecto Láctea 4.0</a></li>
+            <li><a href="index.html#contacto">Contacto B2B</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Áreas Técnicas</h4>
+          <ul class="footer-nav">
+            <li><a href="index.html#servicios">Automation (PLC / HMI)</a></li>
+            <li><a href="index.html#servicios">SCADA & Supervision</a></li>
+            <li><a href="index.html#servicios">IIoT & Digitalization</a></li>
+            <li><a href="index.html#servicios">OT Cybersecurity</a></li>
+            <li><a href="index.html#servicios">Motion & Robotics</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Estándares & Marcos</h4>
+          <div class="certifications-badge-list">
+            <div class="cert-item"><i class="fa-solid fa-shield-halved"></i> IEC 62443 (OT Security)</div>
+            <div class="cert-item"><i class="fa-solid fa-lock"></i> ISO/IEC 27001 Principles</div>
+            <div class="cert-item"><i class="fa-solid fa-network-wired"></i> OPC UA & MQTT Sparkplug</div>
+            <div class="cert-item"><i class="fa-solid fa-gears"></i> ISA-88 / ISA-95 Standards</div>
+            <div class="cert-item"><i class="fa-solid fa-bell"></i> ISA-18.2 Alarm Mgmt.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">
+          &copy; 2026 OWLTECH AUTOMATION. Todos los derechos reservados.
+        </p>
+        <div class="footer-legal">
+          <span>Website: owltechautomation.com</span>
+          <span>·</span>
+          <span>contact@owltechautomation.com</span>
+          <span>·</span>
+          <span>Colombia</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js?v=3"></script>
+</body>
+</html>
