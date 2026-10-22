@@ -7,8 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeader();
   initNavigation();
   initCorporateTabs();
-  initTeamCards();
-  initTeamDescriptions();
+  // Ocultado temporalmente: microinteracción y carga de descripciones de integrantes
+  // initTeamCards();
+  // initTeamDescriptions();
   initProjectFilters();
   initContactForm();
   initProjectDetailNav();
